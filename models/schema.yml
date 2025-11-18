@@ -2,7 +2,7 @@ version: 2
 sources:
   - name: raw # alias de la table
     database: projet-intelligence-auditive
-    schema: projet #Nom exact du dataset dans BQ
+    schema: doc_brutes #Nom exact du dataset dans BQ
     loader: bigquery
     description: "données brutes"
     tables:
