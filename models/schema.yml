@@ -1,17 +1,19 @@
 version: 2
 sources:
-- name: raw # alias de la table
-schema: doc_brutes #Nom exact du dataset dans BQ
-description: 
-tables:
-- name: raw_data_repository # alias de la table
-identifier: data_repository #Nom exact de la table dans BQ
-description: 
+  - name: raw # alias de la table
+    database: projet-intelligence-auditive
+    schema: projet #Nom exact du dataset dans BQ
+    loader: bigquery
+    description: "données brutes"
+    tables:
+      - name: raw_data_repository # alias de la table
+        identifier: data_repository #Nom exact de la table dans BQ
+        description: "environnement"
 
-- name: raw_plos_one_data
-identifier: plos_one_data
-description: 
+      - name: raw_plos_one_data
+        identifier: plos_one_data
+        description: "patient"
 
-- name: raw_EVOreal # alias de la table
-identifier: EVOreal_time_synth #Nom exact du dataset dans BQ
-description: raw data EVOreal
+      - name: raw_EVOreal # alias de la table
+        identifier: EVOreal_time_synth #Nom exact du dataset dans BQ
+        description: "appareil"
